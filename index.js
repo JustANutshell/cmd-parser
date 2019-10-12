@@ -4,6 +4,28 @@ module.exports=(function(){
 			this.argument=options.argument;
 			this.onRun=options.onRun;
 		}
+		generateSyntax(){
+			var out="";
+			for(var a=0;a<this.argument.length;a++){
+				var b="";
+				switch(this.argument[a].type){
+					case "text":
+						b=this.argument[a].value;
+						break;
+					case "argument":
+						b="["+this.argument[a].name+"]";
+						if(!this.argument[a].needed){
+							b="("+b+")";
+						}
+						break;
+					default:
+						throw null;
+						break;
+				}
+				out=out+(a===0?"":" ")+b;
+			}
+			return out;
+		}
 	}
 	var commandInput=class{
 		constructor(){
