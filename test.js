@@ -20,6 +20,7 @@ a.addCommand({
 	}
 });
 a.fire("!say a b c lohl",{id:1234});
+a.fire("!say",{id:1234});
 console.log(a.commands[0].generateSyntax());
 a.fire("!lol a b c lohl",{id:1234});
 console.log(a.commands[1].generateSyntax());

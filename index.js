@@ -112,7 +112,7 @@ module.exports=(function(){
 					if(this.onCmdError===null){
 						// warn
 					}else{
-						this.onCmdError({gotCmd:str,errorMsg:"SyntaxError"},optionsToCmd);
+						this.onCmdError({gotCmd:str,errorMsg:"SyntaxError",cmd:command},optionsToCmd);
 					}
 					break;
 				case null:
