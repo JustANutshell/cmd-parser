@@ -1,10 +1,11 @@
 {
   "name": "dark-cmd-parser",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node build/test.js",
+    "build": "tsc"
   },
   "bugs": {
     "url": "https://github.com/JustANutshell/dark-cmd-parser/issues",
@@ -12,5 +13,8 @@
   },
   "repository": "github:JustANutshell/dark-cmd-parser",
   "author": "Dark",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^13.13.2"
+  }
 }
